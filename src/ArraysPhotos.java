@@ -69,6 +69,7 @@ Sushi[] Sushi = new Sushi [10];
         for (int x = 0; x < Sushi.length; x++) {
             Sushi[x].numberOfPieces=(int) (Math.random() * 10) +10;
         }
+        //change
     }
 
 }
