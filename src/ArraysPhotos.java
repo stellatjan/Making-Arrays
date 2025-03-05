@@ -51,9 +51,25 @@ Sushi[] Sushi = new Sushi [10];
         Sushi[9]=chefschoice;
         Sushi[9].displaySushiInfo();
 
+//        for(int x;x<10;x=x++) { you can do [x] and sushi[x] = new Sushi(peram) then do sushi.print info
 
-
+    PrintArray();
+    ChangePieceCount();
 
     }
+
+    public void PrintArray(){
+        for(int x=0;x<10;x++){
+         Sushi[x].displaySushiInfo();
+
+        }
+    }
+
+    public void ChangePieceCount() {
+        for (int x = 0; x < Sushi.length; x++) {
+            Sushi[x].numberOfPieces=(int) (Math.random() * 10) +10;
+        }
+    }
+
 }
 
