@@ -55,6 +55,7 @@ Sushi[] Sushi = new Sushi [10];
 
     PrintArray();
     ChangePieceCount();
+    TotalSushiOrder();
 
     }
 
@@ -67,10 +68,25 @@ Sushi[] Sushi = new Sushi [10];
 
     public void ChangePieceCount() {
         for (int x = 0; x < Sushi.length; x++) {
-            Sushi[x].numberOfPieces=(int) (Math.random() * 10) +10;
+            Sushi[x].numberOfPieces = (int) (Math.random() * 10) + 10; // Set a random piece count between 10 and 19
         }
-        //change
+
+        // Print the updated piece count for each sushi item
+        System.out.println("Piece count for each sushi item:");
+        for (int x = 0; x < Sushi.length; x++) {
+            System.out.println("Sushi item " + (x+1) + ": " + Sushi[x].numberOfPieces + " pieces");
+        }
     }
 
-}
+
+    public void TotalSushiOrder(){
+        int totalPieces = 0; // Variable to store the total number of sushi pieces
+        for (int x = 0; x < Sushi.length; x++) {
+            totalPieces += Sushi[x].numberOfPieces; //+= variable = variable + value
+
+        }
+        System.out.println("Total number of sushi pieces: " + totalPieces);
+    }
+    }
+
 
