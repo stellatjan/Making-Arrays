@@ -5,10 +5,11 @@ public class ArraysPhotos {
         ArraysPhotos ArraysPhotos = new ArraysPhotos();
 
     }
-Sushi[] Sushi = new Sushi [10];
+
+    Sushi[] Sushi = new Sushi[10];
 
     //constructor
-    public ArraysPhotos(){
+    public ArraysPhotos() {
         System.out.println("making arrays with photos!");
 
         Sushi spicytunahandroll = new Sushi("handroll");
@@ -44,24 +45,25 @@ Sushi[] Sushi = new Sushi [10];
         Sushi[7].displaySushiInfo();
 
         Sushi hamachikama = new Sushi("girlled yellowtail with lemon, main dish");
-        Sushi[8]= hamachikama;
+        Sushi[8] = hamachikama;
         Sushi[8].displaySushiInfo();
 
         Sushi chefschoice = new Sushi("Chef's choice of sashimi and nigiri");
-        Sushi[9]=chefschoice;
+        Sushi[9] = chefschoice;
         Sushi[9].displaySushiInfo();
 
 //        for(int x;x<10;x=x++) { you can do [x] and sushi[x] = new Sushi(peram) then do sushi.print info
 
-    PrintArray();
-    ChangePieceCount();
-    TotalSushiOrder();
+        PrintArray();
+        ChangePieceCount();
+        TotalSushiOrder();
+        BiggestSushiOrder();
 
     }
 
-    public void PrintArray(){
-        for(int x=0;x<10;x++){
-         Sushi[x].displaySushiInfo();
+    public void PrintArray() {
+        for (int x = 0; x < 10; x++) {
+            Sushi[x].displaySushiInfo();
 
         }
     }
@@ -74,12 +76,12 @@ Sushi[] Sushi = new Sushi [10];
         // Print the updated piece count for each sushi item
         System.out.println("Piece count for each sushi item:");
         for (int x = 0; x < Sushi.length; x++) {
-            System.out.println("Sushi item " + (x+1) + ": " + Sushi[x].numberOfPieces + " pieces");
+            System.out.println("Sushi item " + (x + 1) + ": " + Sushi[x].numberOfPieces + " pieces");
         }
     }
 
 
-    public void TotalSushiOrder(){
+    public void TotalSushiOrder() {
         int totalPieces = 0; // Variable to store the total number of sushi pieces
         for (int x = 0; x < Sushi.length; x++) {
             totalPieces += Sushi[x].numberOfPieces; //+= variable = variable + value
@@ -87,6 +89,19 @@ Sushi[] Sushi = new Sushi [10];
         }
         System.out.println("Total number of sushi pieces: " + totalPieces);
     }
+
+
+    public void BiggestSushiOrder() {
+        int bigsize = 0;
+        for (int x = 0; x < Sushi.length; x++) {// Use Sushi.length instead of 18
+            if (Sushi[x].numberOfPieces > bigsize) {
+                bigsize = Sushi[x].numberOfPieces;
+            }
+        }
+        System.out.println("Biggest sushi order: " + bigsize);
     }
+
+
+}
 
 

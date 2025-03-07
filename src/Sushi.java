@@ -7,6 +7,7 @@ public class Sushi {
     int numberOfPieces;
     boolean containsSoy;
 
+
     // Constructor for Pstyle
     public Sushi(String Pstyle) {
         name = "Spicy tuna handroll";
